@@ -16,8 +16,8 @@ const Product = (props) => {
 
     const { product } = props;
     const productPrice = product.price;
-    const firstImg = product.img_first;
-    const secondImg = product.img_second;
+    const firstImg = product.imgs.img_first;
+    const secondImg = product.imgs.img_second;
     const imgSrc = isHovered && secondImg ? secondImg : firstImg;
 
     const buttonStyle = {

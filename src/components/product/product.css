@@ -14,6 +14,7 @@
 
 .product-img {
     max-width: 100%;
+    cursor: zoom-in;
 }
 
 .add-to-cart-btn {

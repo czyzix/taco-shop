@@ -1,5 +1,6 @@
 import "./modal.css";
 import ReactDOM from "react-dom";
+import Slider from "../slider/slider";
 
 const Modal = ({open, onClose, product}) => {
     if (!open) return null
@@ -16,10 +17,14 @@ const Modal = ({open, onClose, product}) => {
             </div>
             <div className="modal-body">
                 <div className="left-side">
-                    <img className="product-imgs" src={`../productsphotos/${product.img_first}.jpg`} alt="" />
+                    <Slider
+                        product={product}
+                    ></Slider>
+                    {/* <img className="product-imgs" src={`../productsphotos/${product.img_first}.jpg`} alt="" /> */}
                 </div>
                 <div className="right-side">
                     <table>
+                        <tbody>
                         <tr>
                             <td className="td-title">Title</td>
                             <td>{product.name}</td>
@@ -28,6 +33,7 @@ const Modal = ({open, onClose, product}) => {
                             <td className="td-title">Price</td>
                             <td style={{color: 'blue', fontWeight: 600}}>{productPrice.toFixed(2)} zł</td>
                         </tr>
+                        </tbody>
                     </table>
                     <button className="modal-add-to-cart-btn">ADD TO CART</button>
                 </div>
