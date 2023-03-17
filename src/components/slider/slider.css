@@ -13,23 +13,25 @@
 
 .prev-btn {
     position: absolute;
-    top: 46%;
+    top: 48%;
     left: 0;
     z-index: 10;
     cursor: pointer;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .next-btn {
     position: absolute;
-    top: 46%;
+    top: 48%;
     right: 0;
     z-index: 10;
     cursor: pointer;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .slide {
