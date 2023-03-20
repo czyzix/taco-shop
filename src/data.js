@@ -7,7 +7,8 @@ const data = {
             imgs: {
                 img_first: "triplevinyl",
                 img_second: "triplevinylback",
-            }
+            },
+            descr: "A package consisting of 3 vinyl releases: JARMARK + EUROPA + POCZTOWKA"
         },
         {
             id: 2,
@@ -16,7 +17,8 @@ const data = {
             imgs: {
                 img_first: "tour2022t-shirtfront",
                 img_second: "tour2022t-shirtback"
-            }
+            },
+            descr: "T-shirt produced for the 2020/2021/2022 Tour"
         },
         {
             id: 3,
@@ -25,7 +27,8 @@ const data = {
             imgs: {
                 img_first: "tht-shirtfront",
                 img_second: "tht-shirtback"
-            }
+            },
+            descr: "T-shirt produced for the 2020/2021/2022 Tour"
         },
         {
             id: 4,
@@ -34,7 +37,8 @@ const data = {
             imgs: {
                 img_first: "jarmarkvinyl",
                 img_second: "jarmarkvinylback",
-            }
+            },
+            descr: "JARMARK is the fifth studio album by Polish rapper Taco Hemingway. The main topics of the lyrics are dilemmas about the country, political topics and problems of the young society. The album was released on August 28, 2020 by Taco Corp and 2020 label. The recordings were made available on the rapper's website and on YouTube. The material, recorded was produced by many producers."
         },
         {
             id: 5,
@@ -44,7 +48,8 @@ const data = {
                 img_first: "europavinyl",
                 img_second: "europavinylback",
                 img_third: "europavinylinside",
-            }
+            },
+            descr: "EUROPA is the sixth studio album by Polish rapper Taco Hemingway. The main topics of the of the lyrics are the life dilemmas of a rapper who tries to escape from his popularity. The album was released on August 28, 2020 by Taco Corp and 2020 label. The recordings were made available on the rapper's website and on YouTube. The material, recorded was produced by many producers."
         },
         {
             id: 6,
@@ -53,7 +58,8 @@ const data = {
             imgs: {
                 img_first: "pocztowkat-shirtfront",
                 img_second: "pocztowkat-shirtback"
-            }
+            },
+            descr: "T-shirt produced for the realse of the POCZTOWKA album"
         },
         {
             id: 7,
@@ -62,7 +68,8 @@ const data = {
             imgs: {
                 img_first: "pocztowkavinyl",
                 img_second: "pocztowkavinylback",
-            }
+            },
+            descr: "POCZTÓWKA (Pocztówka z WWA, Lato'19) is the fourth studio album by Polish rapper Taco Hemingway. The main topics of the lyrics are stories about Warsaw and life in it. The album was released on July 23, 2019 by Taco Corp. The recordings were made available on the rapper's website and on YouTube. The material, recorded was produced by many producers."
         },
         {
             id: 8,
@@ -70,7 +77,8 @@ const data = {
             name: "CAFE BELGA CD",
             imgs: {
                 img_first: "belgacd",
-            }
+            },
+            descr: "CAFÉ BELGA is the second full-length album by Taco Hemingway. This project, created in Brussels and Warsaw between January and June 2018, was entirely produced by longtime collaborators and friends of Taco - Rumak and Borucci. Personal and bitterly nostalgic songs are intertwined with fragments of an audio interview that Filip Szcześniak gave in Brussels to journalist Marek Fall."
         },
         {
             id: 9,
@@ -78,7 +86,8 @@ const data = {
             name: "SZPRYCER CD",
             imgs: {
                 img_first: "szprycercd",
-            }
+            },
+            descr: "Fifth mini-album of Polish rapper Taco Hemingway. The album was released on July 30, 2017 by Taco Corp. The recordings were made available on the rapper's website and on YouTube. The album represents a hip-hop style with trap and pop influences. The main topic of the lyrics are nostalgia, nightlife and love dilemmas."
         },
         {
             id: 10,
@@ -86,7 +95,8 @@ const data = {
             name: "MARMUR CD",
             imgs: {
                 img_first: "marmurcd",
-            }
+            },
+            descr: 'MARMUR is a radio drama album created thanks to the collaboration of rapper Filip Szcześniak and producer Rumak. Its hero, enigmatically named SZCZEŚNIAK, is checked in against his will in the mysterious Tricity hotel "Marmur". On the spot, he learns that he has a lot of work ahead of him, although no one tells him what it is supposed to consist of. Unfortunately, his initial peace of mind is shattered by the presence of the sinister bearded man with whom he shared a compartment on the Warsaw Tricity train.'
         },
         {
             id: 11,
@@ -94,7 +104,8 @@ const data = {
             name: "WOSK CD",
             imgs: {
                 img_first: "woskcd",
-            }
+            },
+            descr: "This collection of 6 tracks, recorded in July 2016, is a personal summary of Taco's career a few months before the release of the first full album MARMUR. The production of the tracks was fairly shared between Rumak and Borucci."
         },
         {
             id: 12,
@@ -102,7 +113,8 @@ const data = {
             name: "UMOWA O DZIELO CD",
             imgs: {
                 img_first: "umowacd",
-            }
+            },
+            descr: "Taco Hemingway's second album is an echo of the big-city threads that form the background for the action of the TROJKAT WARSZAWSKI. The album is promoted by the music video 6 ZER, as well as the single NASTEPNA STACJA known from Radio Three, which is a record of a ride in the Warsaw's subway. In the musical sphere, Rumak's climatic backgrounds create a complementary tandem with Taco's voice and style."
         },
         {
             id: 13,
@@ -110,7 +122,8 @@ const data = {
             name: "TROJKAT WARSZAWSKI CD",
             imgs: {
                 img_first: "trojkatcd",
-            }
+            },
+            descr: "The Warsaw Triangle is Taco's second mini-album. It tells the story of a love triangle, the characters wandering around the city, looking for each other, trying to escape from their feelings."
         }
     ]
 }
