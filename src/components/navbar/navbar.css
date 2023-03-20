@@ -10,6 +10,7 @@
     color: white;
     top: 0;
     padding: 20px 100px;
+    z-index: 1000;
 }
 
 h1 {
@@ -29,4 +30,18 @@ h1 {
 a {
     text-decoration: none;
     color: white;
+}
+
+@media only screen and (max-width: 550px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .links {
+        margin-top: 20px;
+    }
 }

@@ -1,6 +1,6 @@
 .container-slider {
     position: relative;
-    height: 295px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,5 +65,11 @@
     }
     100% {
       transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .slider-img {
+        width: 100%;
     }
 }

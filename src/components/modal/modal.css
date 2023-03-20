@@ -13,14 +13,14 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 10vh);
     background-color: white;
     z-index: 1000;
     border: solid 1px grey;
     box-shadow: 0px 0px 18px 0px rgba(31, 31, 31, 1);
-    max-width: 800px;
+    width: 960px;
 }
 
 .modal-header {
@@ -41,15 +41,12 @@
     cursor: pointer;
 }
 
-.product-imgs {
-    max-width: 350px;
-}
-
 .modal-body {
     display: flex;
     flex-direction: row;
     column-gap: 40px;
     padding: 20px 40px 20px 20px;
+    overflow-y: scroll;
 }
 
 .td-title {
@@ -77,7 +74,7 @@ td {
     --line-height: 1.4;
 
     max-height: calc(var(--max-lines) * 1em * var(--line-height));
-
+    font-size: 15px;
     overflow: hidden;
 }
 
@@ -87,6 +84,7 @@ td {
     cursor: pointer;
     font-size: 17px;
     margin-top: 3px;
+    margin-bottom: 10px;
 }
 
 .expand-btn:hover {
@@ -103,4 +101,22 @@ td {
 
 .cutoff-text:has(+ .expand-btn:checked) {
     max-height: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    .modal {
+        width: 95vw;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .modal {
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .modal-body {
+        flex-direction: column;
+        padding: 20px 20px;
+    }
 }
