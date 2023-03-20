@@ -36,6 +36,17 @@ const Modal = ({open, onClose, product}) => {
                         </tbody>
                     </table>
                     <button className="modal-add-to-cart-btn">ADD TO CART</button>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td className="td-title">Descr</td>
+                                <td>
+                                    <p className="cutoff-text">{product.descr}</p>
+                                    <input type="checkbox" className="expand-btn"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
