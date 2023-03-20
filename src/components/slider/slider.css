@@ -9,6 +9,7 @@
 
 .slider-img {
     width: 300px;
+    user-select: none;
 }
 
 .prev-btn {
