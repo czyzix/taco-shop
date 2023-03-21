@@ -6,7 +6,7 @@ const data = {
             name: "SET 3 x VINYL",
             imgs: {
                 img_first: "triplevinyl",
-                img_second: "triplevinylback",
+                img_second: "triplevinylback"
             },
             descr: "A package consisting of 3 vinyl releases: JARMARK + EUROPA + POCZTOWKA",
             type: "vinyl"
@@ -17,7 +17,9 @@ const data = {
             name: "2022 TOUR BLACK T-SHIRT",
             imgs: {
                 img_first: "tour2022t-shirtfront",
-                img_second: "tour2022t-shirtback"
+                img_second: "tour2022t-shirtback",
+                img_third: "tour2022t-shirtlogo",
+                img_foruth: "tour2022t-shirtlogoback",
             },
             descr: "T-shirt produced for the 2020/2021/2022 Tour",
             type: "clothes"
@@ -28,7 +30,9 @@ const data = {
             name: "2022 TOUR WHITE T-SHIRT",
             imgs: {
                 img_first: "tht-shirtfront",
-                img_second: "tht-shirtback"
+                img_second: "tht-shirtback",
+                img_third: "tht-shirtlogo",
+                img_fourth: "tht-shirtlogoback"
             },
             descr: "T-shirt produced for the 2020/2021/2022 Tour",
             type: "clothes"
@@ -40,6 +44,7 @@ const data = {
             imgs: {
                 img_first: "jarmarkvinyl",
                 img_second: "jarmarkvinylback",
+                img_third: "jarmarkvinylinside"
             },
             descr: "JARMARK is the fifth studio album by Polish rapper Taco Hemingway. The main topics of the lyrics are dilemmas about the country, political topics and problems of the young society. The album was released on August 28, 2020 by Taco Corp and 2020 label. The recordings were made available on the rapper's website and on YouTube. The material, recorded was produced by many producers.",
             type: "vinyl"
@@ -74,6 +79,7 @@ const data = {
             imgs: {
                 img_first: "pocztowkavinyl",
                 img_second: "pocztowkavinylback",
+                img_third: "pocztowkavinylinside",
             },
             descr: "POCZTÓWKA (Pocztówka z WWA, Lato'19) is the fourth studio album by Polish rapper Taco Hemingway. The main topics of the lyrics are stories about Warsaw and life in it. The album was released on July 23, 2019 by Taco Corp. The recordings were made available on the rapper's website and on YouTube. The material, recorded was produced by many producers.",
             type: "vinyl"
