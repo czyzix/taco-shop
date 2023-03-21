@@ -1,10 +1,12 @@
 .filters-container {
+    display: flex;
+    flex-direction: row;
     margin: 20px auto 40px;
     max-width: 990px;
 }
 
 .search-bar {
-    width: 300px;
+    width: 250px;
     height: 35px;
     padding: 7px;
     font-size: 15px;
@@ -33,4 +35,25 @@
     font-size: 15px;
     border-radius: 0;
     border: dotted 2px rgb(207, 207, 207);
+}
+
+@media only screen and (max-width: 1050px) {
+    .filters-container {
+        max-width: 735px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .filters-container {
+        max-width: 480px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .filters-container {
+        max-width: 250px;
+        flex-direction: column;
+        justify-content: left;
+        padding-left: 0;
+    }
 }
