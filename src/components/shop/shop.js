@@ -5,25 +5,23 @@ import Filters from "../filters/filters.js"
 
 const Shop = (props) => {
     const {products} = props;
-
-    
-
     const [search, setSearch] = useState('')
-    console.log(search);
-
     const handleInputChange = (e) => {
         setSearch(e.target.value)
     };
 
-    /* const [selectedSortOption, setSelectedSortOption] = useState('A-Z');
+    const [productsType, setProductsType] = useState('');
+    const handleProductsTypeChange = (e) => {
+        setProductsType(e.target.value)
+    };
+
     const [visibleProducts, setVisibleProducts] = useState(products);
-
-    function handleSortChange(event) {
-        setSelectedSortOption(event.target.value);
-        sortProducts(event.target.value);
+    const [selectedSortByOption, setSelectedSortByOption] = useState('');
+    const handleSortByChange = (e) => {
+        setSelectedSortByOption(e.target.value);
+        sortByProducts(e.target.value);
     }
-
-    function sortProducts(sortOption) {
+    const sortByProducts = (sortOption) => {
         const sortedProducts = [...products];
         if (sortOption === 'a-z') {
           sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
@@ -35,22 +33,25 @@ const Shop = (props) => {
           sortedProducts.sort((a, b) => b.price - a.price);
         }
         setVisibleProducts(sortedProducts);
-    } */
+    }
 
     return (
         <div>
             <h2>SHOP</h2>
             <Filters
                 handleInputChange={handleInputChange}
-                /* handleSortChange={handleSortChange}
-                selectedSortOption={selectedSortOption} */
+                handleSortByChange={handleSortByChange}
+                selectedSortOption={selectedSortByOption}
+                handleProductsTypeChange={handleProductsTypeChange}
             >
             </Filters>
             <ul className="products-container">
-                {products
+                {visibleProducts
                     .filter((product) => {
-                        return search.toLowerCase().trim() === ''
-                            ? product : product.name.toLowerCase().includes(search);
+                        return (
+                            (product.name.toLowerCase().includes(search.toLowerCase().trim()) && 
+                            (!productsType || product.type === productsType))
+                        )
                     })
                     .map((product) => (
                         <li>

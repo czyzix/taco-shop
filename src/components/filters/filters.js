@@ -2,7 +2,7 @@ import "./filters.css";
 
 const Filters = (props) => {
 
-    const { handleInputChange } = props;
+    const { handleInputChange, handleSortByChange, selectedSortByOption, handleProductsTypeChange } = props;
 
     return (
         <div className="filters-container">
@@ -11,14 +11,21 @@ const Filters = (props) => {
                 type="text" onChange={handleInputChange}
                 placeholder="Search for a product..."
             />
-            <select className="sort-by">
+            <select 
+                className="sort-by"
+                onChange={handleSortByChange}
+                value={selectedSortByOption}
+            >
                 <option value="">Sort by:</option>
                 <option value="a-z">Name A-Z</option>
                 <option value="z-a">Name Z-A</option>
-                <option value="cheap-exp">Lowest price</option>
-                <option value="exp-cheap">Highest price</option>
+                <option value="lowest-price">Lowest price</option>
+                <option value="highest-price">Highest price</option>
             </select>
-            <select className="product-type">
+            <select 
+                className="product-type"
+                onChange={handleProductsTypeChange}
+            >
                 <option value="">Product type:</option>
                 <option value="cd">CD</option>
                 <option value="vinyl">Vinyl</option>
