@@ -1,0 +1,36 @@
+.filters-container {
+    margin: 20px auto 40px;
+    max-width: 990px;
+}
+
+.search-bar {
+    width: 300px;
+    height: 35px;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 0;
+    border: dotted 2px rgb(207, 207, 207);
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: rgb(112, 112, 112);
+}
+
+.sort-by {
+    width: 110px;
+    height: 35px;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 0;
+    border: dotted 2px rgb(207, 207, 207);
+}
+
+.product-type {
+    width: 155px;
+    height: 35px;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 0;
+    border: dotted 2px rgb(207, 207, 207);
+}
