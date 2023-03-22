@@ -3,10 +3,47 @@ import Shop from './components/shop/shop.js';
 import Navbar from './components/navbar/navbar.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import data from './data.js';
+import { useState, useEffect, startTransition } from 'react';
 
 function App() {
 
   const { products } = data;
+
+  const [ cartItems, setCartItems ] = useState([]);
+
+  const onAdd = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist) {
+      const newCartItems = cartItems.map((x) =>
+      x.id === product.id ? { ...exist, qty: exist.qty + 1} : x)
+      setCartItems(newCartItems);
+      localStorage.setItem('cartItems', JSON.stringify(newCartItems))
+    } else {
+      const newCartItems = [...cartItems, { ...product, qty: 1}]
+      setCartItems(newCartItems);
+      localStorage.setItem('cartItems', JSON.stringify(newCartItems))
+    }
+  };
+
+  const onRemove = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist.qty === 1) {
+      const newCartItems = cartItems.filter((x) => x.id !== product.id)
+      setCartItems(newCartItems);
+      localStorage.setItem('cartItems', JSON.stringify(newCartItems))
+    } else {
+      const newCartItems = cartItems.map((x) =>
+      x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x)
+      setCartItems(newCartItems);
+      localStorage.setItem('cartItems', JSON.stringify(newCartItems))
+    }
+  }
+
+  useEffect(() => {
+    startTransition(() => {
+      setCartItems(localStorage.getItem('cartItems') ? 
+      JSON.parse(localStorage.getItem('cartItems')) : [])})
+  }, [])
 
   return (
     <Router>
@@ -15,10 +52,18 @@ function App() {
         <div className='content'>
           <Switch>
             <Route exact path="/cart">
-              <Cart />
+              <Cart
+                onAdd={onAdd}
+                onRemove={onRemove}
+                cartItems={cartItems}
+              />
             </Route>
             <Route exact path="/">
-              <Shop products={products}></Shop>
+              <Shop 
+                products={products}
+                onAdd={onAdd}
+                cartItems={cartItems}
+              />
             </Route>
           </Switch>
         </div>
