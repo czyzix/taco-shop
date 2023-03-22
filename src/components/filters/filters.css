@@ -20,7 +20,7 @@
 }
 
 .sort-by {
-    width: 110px;
+    width: 155px;
     height: 35px;
     padding: 7px;
     font-size: 15px;
@@ -44,12 +44,6 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .filters-container {
-        max-width: 480px;
-    }
-}
-
-@media only screen and (max-width: 550px) {
     .filters-container {
         max-width: 250px;
         flex-direction: column;
