@@ -4,7 +4,8 @@ import { useState } from "react";
 import Filters from "../filters/filters.js"
 
 const Shop = (props) => {
-    const {products} = props;
+
+    const { products, onAdd, cartItems } = props;
     const [search, setSearch] = useState('')
     const handleInputChange = (e) => {
         setSearch(e.target.value)
@@ -43,8 +44,7 @@ const Shop = (props) => {
                 handleSortByChange={handleSortByChange}
                 selectedSortOption={selectedSortByOption}
                 handleProductsTypeChange={handleProductsTypeChange}
-            >
-            </Filters>
+            ></Filters>
             <ul className="products-container">
                 {visibleProducts
                     .filter((product) => {
@@ -54,12 +54,12 @@ const Shop = (props) => {
                         )
                     })
                     .map((product) => (
-                        <li>
+                        <li key={product.id}>
                             <Product
-                                key={product.id}
                                 product={product}
-                            >
-                            </Product>
+                                onAdd={onAdd}
+                                item={cartItems.find((x) => x.id === product.id)}
+                            ></Product>
                         </li>
                     ))}
             </ul>

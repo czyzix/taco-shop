@@ -4,6 +4,8 @@ import Modal from "../modal/modal";
 
 const Product = (props) => {
 
+    const { product, onAdd } = props;
+
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseOver = () => {
@@ -14,7 +16,6 @@ const Product = (props) => {
         setIsHovered(false);
     };
 
-    const { product } = props;
     const productPrice = product.price;
     const firstImg = product.imgs.img_first;
     const secondImg = product.imgs.img_second;
@@ -51,6 +52,7 @@ const Product = (props) => {
                         style={buttonStyle}
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}
+                        onClick={() => onAdd(product)}
                     >ADD TO CART</button>
                 </div>
                 <p className="product-name">{product.name}</p>
