@@ -1,9 +1,9 @@
 import "./cart.css";
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
+import { FiChevronRight, FiChevronLeft, FiTrash2 } from "react-icons/fi";
 
 const Cart = (props) => {
 
-    const { cartItems, onAdd, onRemove } = props;
+    const { cartItems, onAdd, onRemove, onDelete } = props;
 
     return (
         <div>
@@ -14,13 +14,14 @@ const Cart = (props) => {
                     {cartItems.map((item) => (
                         <div key={item.id} className="cart-item">
                             <img className="cart-item-img" src={`../productsphotos/${item.imgs.img_first}.jpg`} alt={item.name} />
-                            <p className="item-name">{item.name}</p>
+                            <strong className="item-name">{item.name}</strong>
                             <div className="item-qty-section">
+                                <FiTrash2 onClick={() => onDelete(item)} className="qty-btn delete" />
                                 <FiChevronLeft onClick={() => onRemove(item)} className="qty-btn" />
                                 <p>{item.qty}</p>
                                 <FiChevronRight onClick={() => onAdd(item)} className="qty-btn" />
                             </div>
-                            <p className="item-price">{item.price.toFixed(2)}zł x {item.qty} = {(item.qty * item.price).toFixed(2)} zł</p>
+                            <p className="item-price">{item.price.toFixed(2)}zł x {item.qty} = <strong>{(item.qty * item.price).toFixed(2)} zł</strong></p>
                         </div>
                     ))}
                 </div>

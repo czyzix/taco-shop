@@ -39,6 +39,15 @@ function App() {
     }
   }
 
+  const onDelete = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist) {
+      const newCartItems = cartItems.filter((x) => x.id !== product.id)
+      setCartItems(newCartItems);
+      localStorage.setItem('cartItems', JSON.stringify(newCartItems))
+    }
+  }
+
   useEffect(() => {
     startTransition(() => {
       setCartItems(localStorage.getItem('cartItems') ? 
@@ -55,6 +64,7 @@ function App() {
               <Cart
                 onAdd={onAdd}
                 onRemove={onRemove}
+                onDelete={onDelete}
                 cartItems={cartItems}
               />
             </Route>
