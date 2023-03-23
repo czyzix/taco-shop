@@ -22,16 +22,36 @@
 }
 
 .cart-item-img {
-    width: 100px;
+    width: 10%;
+}
+
+.item-name {
+    width: 30%;
+    margin-left: 10px;
 }
 
 .item-qty-section {
+    width: 20%;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+}
+
+.item-price {
+    width: 30%;
 }
 
 .qty-btn {
     cursor: pointer;
     font-size: 25px;
+}
+
+.delete {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.input-qty {
+    width: 40px;
 }
