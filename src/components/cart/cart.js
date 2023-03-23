@@ -3,7 +3,7 @@ import { FiChevronRight, FiChevronLeft, FiTrash2 } from "react-icons/fi";
 
 const Cart = (props) => {
 
-    const { cartItems, onAdd, onRemove, onDelete } = props;
+    const { cartItems, onAdd, onRemove, onDelete, onChangeQty } = props;
 
     return (
         <div>
@@ -18,7 +18,8 @@ const Cart = (props) => {
                             <div className="item-qty-section">
                                 <FiTrash2 onClick={() => onDelete(item)} className="qty-btn delete" />
                                 <FiChevronLeft onClick={() => onRemove(item)} className="qty-btn" />
-                                <p>{item.qty}</p>
+                                <input type="number" value={item.qty} className="input-qty" onChange={() => onChangeQty(item)} />
+                                {/* <p>{item.qty}</p> */}
                                 <FiChevronRight onClick={() => onAdd(item)} className="qty-btn" />
                             </div>
                             <p className="item-price">{item.price.toFixed(2)}zł x {item.qty} = <strong>{(item.qty * item.price).toFixed(2)} zł</strong></p>
