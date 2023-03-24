@@ -2,11 +2,16 @@ import "./modal.css";
 import ReactDOM from "react-dom";
 import Slider from "../slider/slider";
 
-const Modal = ({open, onClose, product}) => {
+const Modal = ({open, onClose, product, onAdd, setIsModalOpen}) => {
     if (!open) return null
     
     const productPrice = product.price;
 
+    const handleOnAddFromModal = (product) => {
+        onAdd(product)
+        setIsModalOpen(false);
+    }
+    
     return ReactDOM.createPortal(
         <>
         <div className="overlay-modal" onClick={onClose}></div>
@@ -34,7 +39,7 @@ const Modal = ({open, onClose, product}) => {
                         </tr>
                         </tbody>
                     </table>
-                    <button className="modal-add-to-cart-btn">ADD TO CART</button>
+                    <button className="modal-add-to-cart-btn" onClick={() => handleOnAddFromModal(product)}>ADD TO CART</button>
                     <table>
                         <tbody>
                             <tr>

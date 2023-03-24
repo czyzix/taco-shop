@@ -61,6 +61,8 @@ const Product = (props) => {
                     open={isModalOpen} 
                     onClose={() => setIsModalOpen(false)}
                     product={product}
+                    onAdd={onAdd}
+                    setIsModalOpen={setIsModalOpen}
                 ></Modal>
             </div>
         </div>
