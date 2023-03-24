@@ -64,10 +64,14 @@ function App() {
       JSON.parse(localStorage.getItem('cartItems')) : [])})
   }, [])
 
+  const allItemsInCartQty = cartItems.reduce((a, c) => a + c.qty, 0);
+
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <Navbar 
+          allItemsInCartQty={allItemsInCartQty}
+        />
         <div className='content'>
           <Switch>
             <Route exact path="/cart">
