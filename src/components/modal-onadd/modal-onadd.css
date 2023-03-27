@@ -1,0 +1,53 @@
+.onadd {
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-onadd-product-img {
+    width: 35%
+}
+
+.modal-onadd-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+}
+
+.texts p {
+    margin: 10px 0 10px 20px;
+}
+
+.info-label {
+    display: flex;
+    background-color: rgb(195, 255, 217);
+    color: rgb(47, 118, 109);
+    border-left: 6px solid rgb(47, 118, 109);
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.icon {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-top: dotted 2px rgb(112, 112, 112);
+}
+
+.modal-btn {
+    margin: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: auto;
+}

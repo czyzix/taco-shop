@@ -1,6 +1,7 @@
 import "./product.css";
 import { useState } from "react";
-import Modal from "../modal/modal";
+import ModalDetails from "../modal-details/modal-details";
+import ModalOnAdd from "../modal-onadd/modal-onadd"
 
 const Product = (props) => {
 
@@ -35,6 +36,19 @@ const Product = (props) => {
         document.body.style.overflowY = "scroll";
     }
 
+    const [isModalOnAddOpen, setIsModalOnAddOpen] = useState(false);
+
+    if (isModalOnAddOpen) {
+        document.body.style.overflowY = "hidden";
+    } else {
+        document.body.style.overflowY = "scroll";
+    }
+
+    const onAddEvents = (product) => {
+        onAdd(product);
+        setIsModalOnAddOpen(true);
+    }
+
     return (
         <div className="container">
             <div className="card">
@@ -52,18 +66,24 @@ const Product = (props) => {
                         style={buttonStyle}
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}
-                        onClick={() => onAdd(product)}
+                        onClick={() => onAddEvents(product)}
                     >ADD TO CART</button>
                 </div>
                 <p className="product-name">{product.name}</p>
                 <strong>{productPrice.toFixed(2)} zł</strong>
-                <Modal 
+                <ModalDetails 
                     open={isModalOpen} 
                     onClose={() => setIsModalOpen(false)}
                     product={product}
-                    onAdd={onAdd}
+                    onAddEvents={onAddEvents}
                     setIsModalOpen={setIsModalOpen}
-                ></Modal>
+                ></ModalDetails>
+                <ModalOnAdd
+                    open={isModalOnAddOpen}
+                    onClose={() => setIsModalOnAddOpen(false)}
+                    product={product}
+                    setIsModalOnAddOpen={setIsModalOnAddOpen}
+                ></ModalOnAdd>
             </div>
         </div>
     );
