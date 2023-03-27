@@ -4,6 +4,7 @@ import Navbar from './components/navbar/navbar.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import data from './data.js';
 import { useState, useEffect, startTransition } from 'react';
+import Footer from './components/footer/footer.js';
 
 function App() {
 
@@ -81,6 +82,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </div>
     </Router>
   );
