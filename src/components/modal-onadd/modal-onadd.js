@@ -23,7 +23,7 @@ const ModalOnAdd = ({open, onClose, product, setIsModalOnAddOpen}) => {
                 </div>
                 <div className="buttons">
                     {/* try do add second button "GO TO CART" */}
-                    <button className="modal-btn" onClick={() => setIsModalOnAddOpen(false)}>CONTINUE SHOPING</button>
+                    <button className="modal-btn" onClick={() => setIsModalOnAddOpen(false)}>CONTINUE</button>
                 </div>
             </div>
         </>
