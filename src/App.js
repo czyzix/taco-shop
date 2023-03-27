@@ -48,16 +48,6 @@ function App() {
     }
   }
 
-  const onChangeQty = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-    if (exist) {
-      const newCartItems = cartItems.map((x) =>
-      x.id === product.id ? { ...exist, qty: parseInt(x.qty) } : x)
-      setCartItems(newCartItems);
-      localStorage.setItem('cartItems', JSON.stringify(newCartItems))
-    }
-  }
-
   useEffect(() => {
     startTransition(() => {
       setCartItems(localStorage.getItem('cartItems') ? 
@@ -80,7 +70,6 @@ function App() {
                 onRemove={onRemove}
                 onDelete={onDelete}
                 cartItems={cartItems}
-                onChangeQty={onChangeQty}
               />
             </Route>
             <Route exact path="/">
