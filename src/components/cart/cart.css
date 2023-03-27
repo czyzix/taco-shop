@@ -3,6 +3,7 @@
     flex-direction: column;
     margin: 0 auto;
     max-width: 900px;
+    padding: 20px;
 }
 
 .cart-is-empty {
@@ -66,7 +67,7 @@
 .payment-container {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    width: 300px;
     margin-left: auto;
 }
 
@@ -89,8 +90,30 @@
     color: white;
     border: none;
     height: 40px;
-    width: 290px;
+    width: 100%;
     font-size: 18px;
     cursor: pointer;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .cart-container {
+        max-width: 320px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cart-item-img, .item-name, .item-qty-section, .item-price {
+        width: 60%;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .payment-container {
+        max-width: 280px;
+    }
 }
