@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/taco-shop/static/css/main.3fc43376.css",
-    "main.js": "/taco-shop/static/js/main.0602fa37.js",
+    "main.js": "/taco-shop/static/js/main.fd7ab796.js",
     "index.html": "/taco-shop/index.html",
     "main.3fc43376.css.map": "/taco-shop/static/css/main.3fc43376.css.map",
-    "main.0602fa37.js.map": "/taco-shop/static/js/main.0602fa37.js.map"
+    "main.fd7ab796.js.map": "/taco-shop/static/js/main.fd7ab796.js.map"
   },
   "entrypoints": [
     "static/css/main.3fc43376.css",
-    "static/js/main.0602fa37.js"
+    "static/js/main.fd7ab796.js"
   ]
 }
