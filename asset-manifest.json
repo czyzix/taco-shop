@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/taco-shop/static/css/main.2d6cd7d4.css",
+    "main.js": "/taco-shop/static/js/main.4b27503d.js",
+    "index.html": "/taco-shop/index.html",
+    "main.2d6cd7d4.css.map": "/taco-shop/static/css/main.2d6cd7d4.css.map",
+    "main.4b27503d.js.map": "/taco-shop/static/js/main.4b27503d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d6cd7d4.css",
+    "static/js/main.4b27503d.js"
+  ]
+}
