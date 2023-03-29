@@ -30,15 +30,9 @@ const Product = (props) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    if (isModalOpen) {
-        document.body.style.overflowY = "hidden";
-    } else {
-        document.body.style.overflowY = "scroll";
-    }
-
     const [isModalOnAddOpen, setIsModalOnAddOpen] = useState(false);
 
-    if (isModalOnAddOpen) {
+    if (isModalOpen || isModalOnAddOpen) {
         document.body.style.overflowY = "hidden";
     } else {
         document.body.style.overflowY = "scroll";
