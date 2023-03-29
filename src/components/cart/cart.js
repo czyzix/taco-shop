@@ -16,7 +16,7 @@ const Cart = (props) => {
                 <div className="cart-items-container">
                     {cartItems.map((item) => (
                         <div key={item.id} className="cart-item">
-                            <img className="cart-item-img" src={process.env.PUBLIC_URL + `/productphotos/${item.imgs.img_first}.jpg`} alt={item.name} />
+                            <img className="cart-item-img" src={process.env.PUBLIC_URL + `/productsphotos/${item.imgs.img_first}.jpg`} alt={item.name} />
                             <strong className="item-name">{item.name}</strong>
                             <div className="item-qty-section">
                                 <FiTrash2 onClick={() => onDelete(item)} className="qty-btn delete" />

@@ -27,7 +27,7 @@ const Slider = (product) => {
                     className={index === currentImg ? `slide-active ${direction}` : "slide"}  
                     key={index}
                 >
-                    {index === currentImg && (<img className="slider-img" src={process.env.PUBLIC_URL + `/productphotos/${productImgs[photo]}.jpg`}  alt={photo} />)} 
+                    {index === currentImg && (<img className="slider-img" src={process.env.PUBLIC_URL + `/productsphotos/${productImgs[photo]}.jpg`}  alt={photo} />)} 
                 </div>
             ))}
             {currentImg < productImgsLenght - 1 && <FiChevronRight onClick={nextSlide} className="next-btn"/>}

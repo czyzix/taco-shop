@@ -15,7 +15,7 @@ const ModalOnAdd = ({open, onClose, product, setIsModalOnAddOpen}) => {
                 </div>
                 <strong className="info-label"><FaCheckSquare className="icon"/>Added to cart.</strong>
                 <div className="modal-onadd-body">
-                    <img className="modal-onadd-product-img" src={process.env.PUBLIC_URL + `/productphotos/${product.imgs.img_first}.jpg`} alt={product.name} />
+                    <img className="modal-onadd-product-img" src={process.env.PUBLIC_URL + `/productsphotos/${product.imgs.img_first}.jpg`} alt={product.name} />
                     <div className="texts">
                         <p>{product.name}</p>
                         <p>{product.price.toFixed(2)} zł</p>

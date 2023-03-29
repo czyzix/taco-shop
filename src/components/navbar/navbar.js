@@ -7,7 +7,7 @@ const Navbar = (props) => {
 
     return ( 
         <div className="navbar">
-            <h1>TACO-CART</h1>
+            <h1>TACO-SHOP</h1>
             <div className="links">
                 <Link to="/">SHOP</Link>
                 <Link to="/cart" className="cart-link">CART{(allItemsInCartQty > 0) && <p>({allItemsInCartQty})</p>}</Link>
