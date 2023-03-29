@@ -68,14 +68,14 @@ function App() {
           />
           <div className='content'>
             <Switch>
-            <Route exact path="/">
+              <Route exact path="/">
                 <Shop
                   products={products}
                   onAdd={onAdd}
                   cartItems={cartItems}
                 />
               </Route>
-              <Route path="/cart">
+              <Route exact path="/cart">
                 <Cart
                   onAdd={onAdd}
                   onRemove={onRemove}
