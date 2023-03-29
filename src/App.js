@@ -1,7 +1,7 @@
 import Cart from './components/cart/cart.js';
 import Shop from './components/shop/shop.js';
 import Navbar from './components/navbar/navbar.js';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import data from './data.js';
 import { useState, useEffect, startTransition } from 'react';
 import Footer from './components/footer/footer.js';
@@ -68,18 +68,18 @@ function App() {
           />
           <div className='content'>
             <Switch>
-              <Route exact path="/cart">
+            <Route exact path="/">
+                <Shop
+                  products={products}
+                  onAdd={onAdd}
+                  cartItems={cartItems}
+                />
+              </Route>
+              <Route path="/cart">
                 <Cart
                   onAdd={onAdd}
                   onRemove={onRemove}
                   onDelete={onDelete}
-                  cartItems={cartItems}
-                />
-              </Route>
-              <Route exact path="/">
-                <Shop
-                  products={products}
-                  onAdd={onAdd}
                   cartItems={cartItems}
                 />
               </Route>
